@@ -3,7 +3,7 @@
 Attention based model for learning to solve the Pickup and Delivery Problem (PDP) using heterogeneous attention mechanism. Training with REINFORCE with greedy rollout baseline.
 
 ## Paper
-For more details, please see our paper [Heterogeneous Attentions for Solving Pickup andDelivery Problem via Deep Reinforcement Learning](./paper/paper.pdf) which has been accepted at [IEEE Transactions on Intelligent Transportation Systems](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6979). If this code is useful for your work, please cite our paper:
+For more details, please see our paper [Heterogeneous Attentions for Solving Pickup andDelivery Problem via Deep Reinforcement Learning](https://github.com/Demon0312/Heterogeneous-Attentions-PDP-DRL/blob/main/paper/paper.pdf) which has been accepted at [IEEE Transactions on Intelligent Transportation Systems](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6979). If this code is useful for your work, please cite our paper:
 
 ```
 @article{li2021heterogeneous,
