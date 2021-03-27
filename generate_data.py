@@ -71,7 +71,7 @@ if __name__ == "__main__":
                 os.makedirs(datadir, exist_ok=True)
 
                 if opts.filename is None:
-                    if opts.is_guassian == False:
+                    if opts.is_gaussian == False:
                         filename = os.path.join(datadir, "{}{}{}_{}_seed{}.pkl".format(
                             problem,
                             "_{}".format(distribution) if distribution is not None else "",
@@ -80,7 +80,7 @@ if __name__ == "__main__":
                         filename = os.path.join(datadir, "{}{}{}_{}_seed{}_{}_{}.pkl".format(
                             problem,
                             "_{}".format(distribution) if distribution is not None else "",
-                            graph_size, opts.name, opts.seed, 'guassian', opts.sigma[0]))
+                            graph_size, opts.name, opts.seed, 'gaussian', opts.sigma[0]))
                 else:
                     filename = check_extension(opts.filename)
 
@@ -89,7 +89,7 @@ if __name__ == "__main__":
 
                 np.random.seed(opts.seed)
                 if problem == 'pdp':
-                    dataset = generate_pdp_data(opts.dataset_size, graph_size, opts.is_guassian, opts.sigma[0])
+                    dataset = generate_pdp_data(opts.dataset_size, graph_size, opts.is_gaussian, opts.sigma[0])
                 else:
                     assert False, "Unknown problem: {}".format(problem)
                 print(dataset[0])
