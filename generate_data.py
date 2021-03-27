@@ -8,9 +8,9 @@ import pickle
 import argparse
 
 
-def generate_pdp_data(dataset_size, pdp_size, is_guassian, sigma):
+def generate_pdp_data(dataset_size, pdp_size, is_gaussian, sigma):
 
-    if is_guassian:
+    if is_gaussian:
         def truncated_normal(graph_size, sigma):
             mu = 0.5
             lower, upper = 0, 1
@@ -40,7 +40,7 @@ if __name__ == "__main__":
     parser.add_argument("--data_dir", default='data', help="Create datasets in data_dir/problem (default 'data')")
     parser.add_argument("--name", type=str, required=True, help="Name to identify dataset")
     parser.add_argument("--problem", type=str, default='pdp')
-    parser.add_argument("--is_guassian", type=str, default=False)
+    parser.add_argument("--is_gaussian", type=str, default=False)
     parser.add_argument('--data_distribution', type=str, default=None,
                         help="Distributions to generate for problem, default 'all'.")
 
