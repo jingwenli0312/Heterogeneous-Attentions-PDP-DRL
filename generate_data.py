@@ -78,7 +78,6 @@ if __name__ == "__main__":
                             graph_size, opts.name, opts.seed, 'gaussian', opts.sigma[0]))
 
                     else:
-                        print('dis', distribution)
                         filename = os.path.join(datadir, "{}{}{}_{}_seed{}.pkl".format(
                             problem,
                             "_{}".format(distribution) if distribution is not None else "",
