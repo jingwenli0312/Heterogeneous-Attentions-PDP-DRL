@@ -40,7 +40,7 @@ if __name__ == "__main__":
     parser.add_argument("--data_dir", default='data', help="Create datasets in data_dir/problem (default 'data')")
     parser.add_argument("--name", type=str, required=True, help="Name to identify dataset")
     parser.add_argument("--problem", type=str, default='pdp')
-    parser.add_argument("--is_gaussian", type=str, default=False)
+    parser.add_argument("--is_gaussian", type=int, default=0)
     parser.add_argument('--data_distribution', type=str, default=None,
                         help="Distributions to generate for problem, default 'all'.")
 
@@ -71,16 +71,18 @@ if __name__ == "__main__":
                 os.makedirs(datadir, exist_ok=True)
 
                 if opts.filename is None:
-                    if opts.is_gaussian == False:
-                        filename = os.path.join(datadir, "{}{}{}_{}_seed{}.pkl".format(
-                            problem,
-                            "_{}".format(distribution) if distribution is not None else "",
-                            graph_size, opts.name, opts.seed))
-                    else:
+                    if opts.is_gaussian:
                         filename = os.path.join(datadir, "{}{}{}_{}_seed{}_{}_{}.pkl".format(
                             problem,
                             "_{}".format(distribution) if distribution is not None else "",
                             graph_size, opts.name, opts.seed, 'gaussian', opts.sigma[0]))
+
+                    else:
+                        print('dis', distribution)
+                        filename = os.path.join(datadir, "{}{}{}_{}_seed{}.pkl".format(
+                            problem,
+                            "_{}".format(distribution) if distribution is not None else "",
+                            graph_size, opts.name, opts.seed))
                 else:
                     filename = check_extension(opts.filename)
 
