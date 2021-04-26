@@ -37,12 +37,12 @@ python run.py --graph_size 20 --baseline rollout --run_name 'PDP20_rollout'
 
 Training data is generated on the fly. To generate validation and test data with uniform distribution (same as used in the paper) for pdp, and sigma is meaningful when 'is_gaussian' is True.
 ```bash
-python generate_data.py --name validation --seed 1234 --is_gaussian False --sigma 1.0
-python generate_data.py --name test --seed 6666 --is_gaussian False --sigma 1.0
+python generate_data.py --name validation --seed 1234 --is_gaussian 0 --sigma 1.0
+python generate_data.py --name test --seed 6666 --is_gaussian 0 --sigma 1.0
 ```
 To generate test data with gaussian distribution with sigma=1.0 (same as used in the paper) for pdp:
 ```bash
-python generate_data.py --name test --seed 6666 --is_gaussian True --sigma 1.0
+python generate_data.py --name test --seed 6666 --is_gaussian 1 --sigma 1.0
 ```
 
 ### Training
