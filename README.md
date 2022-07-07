@@ -7,10 +7,14 @@ For more details, please see our paper [Heterogeneous Attentions for Solving Pic
 
 ```
 @article{li2021heterogeneous,
-  title={Heterogeneous Attentions for Solving Pickup and Delivery Problem via Deep Reinforcement Learning},
-  author={Li, Jingwen and Xin, Liang and Cao, Zhiguang and Andrew, Lim and Song, Wen and Zhang, Jie},
+  title={Heterogeneous attentions for solving pickup and delivery problem via deep reinforcement learning},
+  author={Li, Jingwen and Xin, Liang and Cao, Zhiguang and Lim, Andrew and Song, Wen and Zhang, Jie},
   journal={IEEE Transactions on Intelligent Transportation Systems},
-  year={2021}
+  volume={23},
+  number={3},
+  pages={2306--2315},
+  year={2021},
+  publisher={IEEE}
 }
 ``` 
 
