@@ -91,4 +91,4 @@ python eval.py -h
 ```
 
 ## Acknowledgements
-Thanks to [wouterkool/attention-learn-to-route](https://github.com/wouterkool/attention-learn-to-route) for getting me started with the code for the Pointer Network.
+Thanks to [wouterkool/attention-learn-to-route](https://github.com/wouterkool/attention-learn-to-route) for getting me started with the code for the Attention Model (AM).
